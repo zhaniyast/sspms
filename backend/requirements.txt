@@ -1,0 +1,9 @@
+flask>=3.0
+psycopg[binary]>=3.1
+argon2-cffi>=23.1
+joblib
+scikit-learn
+pandas
+numpy
+python-dotenv
+gunicorn>=22

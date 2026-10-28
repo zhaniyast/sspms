@@ -1,0 +1,318 @@
+﻿code,name,credits,department,offer
+CSS 105,Fundamentals of Programming I,5,Computer Science,1
+CSS 108,Programming Technologies and Educational Practice,5,Computer Science,0
+CSS 109,Calculus 1,5,Mathematics,0
+CSS 110,Calculus 2,5,Mathematics,0
+CSS 112,Physics 1,5,Mathematics,0
+CSS 113,Electronics,5,Computer Science,0
+CSS 114,Programming Fundamentals (Java) I and educational practice,5,Computer Science,1
+CSS 115,Programming Fundamentals (Python) I and educational practice,5,Computer Science,1
+CSS 116,Programming Fundamentals (Java) II and educational practice,5,Computer Science,1
+CSS 117,Programming Fundamentals (Python) II and educational practice,5,Computer Science,1
+CSS 118,AI fundamentals,5,Data Science,1
+CSS 119,ROS & Robot Software Architecture,5,Computer Science,0
+CSS 120,Autonomous systems,5,Computer Science,1
+CSS 206,Database Management Systems 1,5,Computer Science,0
+CSS 214,Introduction to iOS Programming,5,Computer Science,1
+CSS 216,Mobile Application Development,5,Computer Science,0
+CSS 223,C# Object Oriented Programming,5,Computer Science,1
+CSS 225,Web programming fundamentals,5,Computer Science,1
+CSS 231,Web programming: front end,5,Computer Science,1
+CSS 232,Web programming: back end,5,Computer Science,0
+CSS 251,Physics 2,5,Mathematics,1
+CSS 254,Digital design,5,Computer Science,1
+CSS 262,Linux administration & Nix systems for Cybersecurity,5,Computer Science,0
+CSS 305,Database Management Systems 2,5,Computer Science,1
+CSS 306,Cyber Security,5,Computer Science,0
+CSS 309,Low-level Architecture,5,Computer Science,0
+CSS 312,Computer Networks 1,5,Computer Science,0
+CSS 319,Software Testing and Validation,5,Computer Science,0
+CSS 324,Introduction to Machine Learning,5,Data Science,1
+CSS 328,Introduction to Data Analysis,5,Data Science,0
+CSS 342,Software Engineering,5,Computer Science,0
+CSS 345,Advanced computer architecture,5,Computer Science,0
+CSS 346,FPGA Programming,5,Computer Science,0
+CSS 350,Cloud Computing,5,Computer Science,0
+CSS 354,Generative models,5,Data Science,0
+CSS 356,Introduction to IoT,5,Computer Science,1
+CSS 360,Network Security,5,Computer Science,1
+CSS 361,Web Application Security,5,Computer Science,0
+CSS 365,Ethical Hacking and Penetration Testing,5,Computer Science,0
+CSS 382,Industrial practice 1,5,Computer Science,0
+CSS 388,Hardware security,5,Computer Science,0
+CSS 390,Financial Technology (FinTech),5,Computer Science,1
+CSS 410,tools and,5,Computer Science,0
+CSS 421,Computer Vision,5,Data Science,0
+CSS 422,Industrial Practice 3,5,Computer Science,0
+CSS 423,Applied Artificial Intelligence,5,Data Science,0
+CSS 424,Pregraduational practice,5,Computer Science,0
+CSS 434,Business analytics,5,Computer Science,1
+CSS 436,Recommender systems,5,Computer Science,0
+CSS 437,Game Development,5,Computer Science,1
+CSS 439,Distributed Big Data Systems,5,Data Science,0
+CSS 450,Industrial project (Introduction),5,Computer Science,0
+CSS 451,Industrial project (Development),5,Computer Science,0
+CSS 452,Industrial project (Design),5,Computer Science,0
+CSS 453,Industrial project (Testing),5,Computer Science,0
+CSS 458,Robot manipulators,5,Computer Science,0
+CSS 459,Mobile robots,5,Computer Science,0
+CSS 460,Drone systems & Aerial Robotics,5,Computer Science,0
+CSS 461,Large Language Models,5,Computer Science,0
+CSS 462,Introduction to robotics,5,Computer Science,1
+CSS 469,IT in Education (EdTech),5,Computer Science,0
+CSS 470,"Robot Simulation (Gazebo, Isaac Sim)",5,Computer Science,1
+CSS 473,MLOps (Machine Learning Operation),5,Data Science,1
+CSS 479,Preparing and passing a comprehensive exam,5,Computer Science,0
+CSS 487,"Writing and defending a diploma thesis, diploma project",5,Computer Science,0
+CSS 550,Passing a comprehensive exam,5,Computer Science,0
+CSS 551,Writing and defense of thesis,5,Computer Science,0
+CSS 727,Artificial Intelligence in Education,5,Data Science,0
+ECO 328,Research Methods,5,General Education,1
+INF 106,Information and Communication Technologies,5,Information Systems,0
+INF 110,"Design, Communication and Presentation",5,Information Systems,0
+INF 111,Principles of Web Development,5,Information Systems,1
+INF 137,Mathematics for Information Systems 1,5,Mathematics,0
+INF 138,Mathematics for Information Systems 2,5,Mathematics,0
+INF 202,Management,5,Information Systems,0
+INF 203,Information security,5,Information Systems,1
+INF 213,Digital Ethics,5,Information Systems,1
+INF 217,to Business,5,Information Systems,0
+INF 228,UX/UI design,5,Information Systems,0
+INF 300,Product management,5,Information Systems,0
+INF 314,Computer networks 2,5,Information Systems,0
+INF 318,Introduction to Testing,5,Information Systems,0
+INF 321,Machine Learning,5,Data Science,1
+INF 323,Data analysis,5,Data Science,1
+INF 324,Computer vision,5,Data Science,0
+INF 332,Enterprise Architecture,5,Information Systems,0
+INF 337,Deep Learning,5,Data Science,0
+INF 338,Linux Administration,5,Information Systems,0
+INF 344,IT security and Risk Management,5,Information Systems,0
+INF 345,Fundamentals of DevOps,5,Information Systems,0
+INF 346,UX/UI design,5,Information Systems,0
+INF 347,Fundamentals of Cyber Security,5,Information Systems,0
+INF 365,Fundamentals of Finance,5,Information Systems,0
+INF 368,The Go programming language,5,Information Systems,0
+INF 370,User Interface Design,5,Information Systems,1
+INF 371,Automation in Testing,5,Information Systems,0
+INF 374,Process,5,Information Systems,0
+INF 376,Natural Language Processing,5,Data Science,0
+INF 378,AWS Cloud Computing,5,Information Systems,1
+INF 382,Business Process Modelling,5,Information Systems,0
+INF 390,Advanced DevOps,5,Information Systems,0
+INF 392,Blockchain technology,5,Information Systems,0
+INF 406,Data Ethics & Applied Analytics,5,Information Systems,0
+INF 410,Introduction to Building Information Modelling,5,Information Systems,0
+INF 412,IT Asset Management,5,Information Systems,0
+INF 414,"IT Governance, Risk, Compliance",5,Information Systems,0
+INF 415,Leadership in IT,5,Information Systems,0
+INF 421,Security in Computer Networks,5,Information Systems,1
+INF 423,Statistics and Visualization for Data Analysis,5,Mathematics,0
+INF 425,Wireless networks,5,Information Systems,0
+INF 448,Big Data Analytics,5,Data Science,1
+INF 998,MLOps,5,Information Systems,0
+MAT 106,Information and Communication Technologies,5,Mathematics,0
+MAT 123,Linear Algebra,5,Mathematics,0
+MAT 125,Discrete mathematics,5,Mathematics,0
+MAT 126,Mathematical Statistics & Theory of Probability 1,5,Mathematics,0
+MAT 127,Additional chapters of mathematical analysis,5,Mathematics,0
+MAT 128,Number theory,5,Mathematics,0
+MAT 129,Symbolic logic,5,Mathematics,0
+MAT 131,Symmetric Functions theory,5,Mathematics,0
+MAT 132,Spectral theory,5,Mathematics,0
+MAT 144,Scientific Methodology and Analysis,5,Mathematics,0
+MAT 145,Mathematical Olympiad Problems 1,5,Mathematics,0
+MAT 146,Mathematical Olympiad Problems 2,5,Mathematics,0
+MAT 149,Introduction to Lie Algebra,5,Mathematics,1
+MAT 151,Linear Algebra,5,Mathematics,1
+MAT 156,Discrete Mathematics,5,Mathematics,0
+MAT 171,History of Kazakhstan,5,General Education,0
+MAT 172,Philosophy,5,General Education,0
+MAT 212,Symbolic logic,5,Mathematics,1
+MAT 291,Physical Education 1,5,General Education,0
+MAT 292,Physical Education 2,5,General Education,0
+MAT 293,Physical Education 3,5,General Education,0
+MAT 294,Physical Education 4,5,General Education,0
+MAT 313,Model theory,5,Mathematics,0
+MAT 315,Differential geometry and topology,5,Mathematics,0
+MAT 319,Numerical methods of mathematical physics,5,Mathematics,0
+MAT 324,Mathematical Statistics,5,Mathematics,0
+MAT 326,Logic and Model theory,5,Mathematics,1
+MAT 331,Optimization methods,5,Mathematics,0
+MAT 332,Additional chapters of mathematical analysis,5,Mathematics,0
+MAT 335,Galois theory and educational practice,5,Mathematics,0
+MAT 336,Fourier analysis and educational practice,5,Mathematics,0
+MAT 337,Data Science and educational practice,5,Mathematics,0
+MAT 338,Measure theory and integration and educational practice,5,Mathematics,0
+MAT 339,Applied statistics,5,Mathematics,0
+MAT 340,Mathematical Finance: An Introduction to Option Pricing,5,Mathematics,0
+MAT 341,Regression Analysis,5,Mathematics,1
+MAT 364,Cryptography,5,Mathematics,0
+MAT 382,Control Theory,5,Mathematics,0
+MAT 399,Algebraic geometry,5,Mathematics,0
+MAT 402,Graduation thesis,5,Mathematics,0
+MAT 409,Pregraduational practice,5,Mathematics,0
+MAT 410,Enumerative Combinatorics,5,Mathematics,0
+MAT 425,Galois Theory,5,Mathematics,0
+MAT 426,Number theory,5,Mathematics,0
+MAT 433,Theory of interest rates and random processes in life insurance,5,Mathematics,0
+MAT 434,Actuarial principles and their applications,5,Mathematics,0
+MAT 439,State exams,5,Mathematics,0
+MAT 443,Graph Theory,5,Mathematics,0
+MAT 445,Game theory,5,Mathematics,0
+MAT 448,Industrial project 1,5,Mathematics,0
+MAT 449,Industrial project 2,5,Mathematics,0
+MAT 450,Industrial project 3,5,Mathematics,0
+MAT 451,Industrial project 4,5,Mathematics,0
+MAT 464,practise,5,Mathematics,0
+MAT 465,Theory of Groebner bases,5,Mathematics,0
+MAT 467,Theory of distributions,5,Mathematics,0
+MAT 468,"Computational fluid dynamics, thermodynamics",5,Mathematics,0
+MAT 469,Applied statistics,5,Mathematics,0
+MAT 470,Enumerative combinatorics,5,Mathematics,0
+MAT 472,Geometric and Functional inequalities,5,Mathematics,0
+MAT 474,Numerical methods of mathematical physics,5,Mathematics,0
+MAT 476,Mathematical Finance: An Introduction to Option Pricing,5,Mathematics,0
+MAT 478,Representation Theory,5,Mathematics,0
+MAT 483,Simulation and modeling of natural processes,5,Mathematics,0
+MAT 484,Design Of Experiments,5,Mathematics,1
+MAT 486,Mathematical logic,5,Mathematics,0
+MAT 493,Thesis defense,5,Mathematics,0
+MAT 495,Project defense,5,Mathematics,0
+MAT 515,Partial differential equations and its applications,5,Mathematics,0
+MCM 103,Calculus 1,5,Mathematics,0
+MCM 104,Algorithms and programming 1,5,Mathematics,0
+MCM 106,Simulation modelling,5,Mathematics,1
+MCM 109,Calculus 2,5,Mathematics,0
+MCM 302,Numerical methods,5,Mathematics,0
+MCM 308,Heat and Mass Transfer Modeling,5,Mathematics,1
+MCM 309,Mathematical Statistics in R,5,Mathematics,0
+MCM 310,Numerical methods,5,Mathematics,0
+MCM 311,Optimization methods,5,Mathematics,0
+MCM 312,Thermodynamics,5,Mathematics,0
+MCM 315,Simulation and modeling of natural processes,5,Mathematics,0
+MCM 317,Database Management Systems,5,Mathematics,0
+MCM 405,Numerical Methods of Monte Carlo,5,Mathematics,1
+MCM 406,Industrial internship 2,5,Mathematics,0
+MCM 409,Thesis defense,5,Mathematics,0
+MCM 410,Project defense,5,Mathematics,0
+MCM 416,Industrial internship,5,Mathematics,0
+MDE 001,General English (A1 level),5,General Education,0
+MDE 002,General English (A2 level),5,General Education,0
+MDE 003,General English (B1 level),5,General Education,0
+MDE 011,Kazakh Language 1 (A2 level),5,General Education,0
+MDE 012,Kazakh Language 2 (B1 level),5,General Education,0
+MDE 021,Russian Language 1 (A2 level),5,General Education,0
+MDE 022,Russian Language 2 (B1 level),5,General Education,0
+MDE 103,Foreign Language 1 (English for Academic Purposes - B1 level ),5,General Education,0
+MDE 104,Foreign Language 1 (English for Academic Purposes - B2 level),5,General Education,0
+MDE 106,Foreign Language 2 (English for Academic Purposes - B2+ level),5,General Education,0
+MDE 107,Foreign Language 1 (English language - A1 level),5,General Education,0
+MDE 108,Foreign Language 2 (English language - A1+ level),5,General Education,0
+MDE 109,Foreign Language 1 (English language - A2 level),5,General Education,0
+MDE 110,Foreign Language 2 (English language - A2+ level),5,General Education,0
+MDE 111,Kazakh Language 1 (A1 level/ for foreigners),5,General Education,0
+MDE 112,Kazakh Language 2 (A2 level/for foreigners),5,General Education,0
+MDE 113,Kazakh Language 1 (B1 level),5,General Education,0
+MDE 114,Kazakh Language 2 (B1 level),5,General Education,0
+MDE 115,Kazakh Language 1 (B2 level),5,General Education,1
+MDE 116,Kazakh Language 2 (B2 level),5,General Education,0
+MDE 117,Kazakh Language 1 (C1 level),5,General Education,0
+MDE 118,Kazakh Language 2 (C1 level),5,General Education,0
+MDE 120,Kazakh Language 2 (B1 level) (SDU Business School ),5,General Education,1
+MDE 121,Russian Language 1 (A1 level/ for foreigners),5,General Education,1
+MDE 122,Russian Language 2 (A2 level/ for foreigners),5,General Education,0
+MDE 123,Russian Language 1 (B1 level),5,General Education,0
+MDE 124,Russian Language 2 (B1 level),5,General Education,0
+MDE 125,Russian Language 1 (B2 level),5,General Education,0
+MDE 126,Russian Language 2 (B2 level),5,General Education,0
+MDE 127,Russian Language 1 (C1 level),5,General Education,0
+MDE 128,Russian Language 2 (C1 level),5,General Education,0
+MDE 129,Kazakh Language 2 (B2 level) (SDU Business School ),5,General Education,1
+MDE 130,Kazakh Language 2 (C1 level) (SDU Business School ),5,General Education,0
+MDE 147,Russian Language 2 (A2 level/ for foreigners),5,General Education,0
+MDE 148,Russian Language 2 (B1 level) (SDU Business School ),5,General Education,0
+MDE 149,Russian Language 2 (B2 level) (SDU Business School ),5,General Education,0
+MDE 150,Russian Language 2 (C1 level) (SDU Business School ),5,General Education,0
+MDE 151,Module of Social and Political Knowledge (Political Science),5,General Education,0
+MDE 152,Module of Social and Political Knowledge (Sociology),5,General Education,0
+MDE 153,Module of Social and Political Knowledge (Cultural Studies),5,General Education,0
+MDE 154,Module of Social and Political Knowledge (Psychology),5,General Education,0
+MDE 156,Foreign Language 1 (English for Academic Purposes - B1 level ),5,General Education,0
+MDE 157,Foreign Language 1 (English for Academic Purposes - B2 level),5,General Education,0
+MDE 158,Foreign Language 2 (English for Specific Purposes - B2+ level),5,General Education,0
+MDE 160,Community engagement and value based Society 1,5,General Education,0
+MDE 161,Economy,5,General Education,0
+MDE 162,Law,5,General Education,0
+MDE 163,Fundamentals of anti-corruption culture,5,General Education,0
+MDE 164,Ecology and sustainable development,5,General Education,0
+MDE 165,General Security,5,General Education,0
+MDE 166,Entrepreneurship,5,General Education,0
+MDE 170,Community engagement and value based Society 2,5,General Education,0
+MDE 171,History of Kazakhstan,5,General Education,0
+MDE 172,Philosophy,5,General Education,0
+MDE 187,Foreign Language 2 (English for Academic Purposes - B1+ level ),5,General Education,0
+MDE 188,Foreign Language 2 (English for Academic Purposes - B1+ level ),5,General Education,0
+MDE 190,Foreign Language 1 (English for Academic Purposes - B1 level ),5,General Education,0
+MDE 191,Foreign Language 2 (English for Academic Purposes - B1+ level ),5,General Education,0
+MDE 192,Foreign Language 1 (English for Academic Purposes - B2 level),5,General Education,0
+MDE 194,Foreign Language 2 (English for Specific Purposes - B2+ level),5,General Education,0
+MDE 195,Foreign Language 1 (General English - A2 level),5,General Education,0
+MDE 196,Foreign Language 2 (English language - A2+ level),5,General Education,0
+MDE 197,Foreign Language 1 (English for Academic Purposes - B1 level ),5,General Education,0
+MDE 198,Foreign Language 2 (English for Academic Purposes - B1+ level ),5,General Education,0
+MDE 199,Foreign Language 1 (English for Academic Purposes - B2 level),5,General Education,0
+MDE 200,Foreign Language 2 (English for Specific Purposes - B2+ level),5,General Education,1
+MDE 283,Turkish language 1 (A1 level),5,General Education,1
+MDE 284,Turkish language 2 (A2 level),5,General Education,0
+MDE 285,Turkish language 1 (B1 level),5,General Education,0
+MDE 286,Turkish language 2 (B2 level),5,General Education,0
+MDE 289,Financial literacy,5,General Education,1
+MDE 291,Physical Education 1,5,General Education,0
+MDE 292,Physical Education 2,5,General Education,0
+MDE 293,Physical Education 3,5,General Education,0
+MDE 294,Physical Education 4,5,General Education,0
+MMS 101,Computer Programming 1,5,Information Systems,1
+MMS 102,Introduction to Multimedia Computing,5,Information Systems,0
+MMS 103,Fundamentals of design,5,Information Systems,0
+MMS 105,Computer programming 2,5,Information Systems,0
+MMS 108,Information and Communication Technologies (in English),5,Information Systems,1
+MMS 112,"Design History, Theory and Criticism",5,Information Systems,0
+MMS 115,Graphic Design,5,Information Systems,0
+MMS 116,Artificial Intelligence in Multimedia Design,5,Data Science,1
+MMS 117,Mathematics for Multimedia,5,Mathematics,0
+MMS 202,3D modeling (basics for character modeling),5,Information Systems,0
+MMS 203,Photography and Video production,5,Information Systems,1
+MMS 205,3D Animation,5,Information Systems,0
+MMS 207,Creative projects management,5,Information Systems,0
+MMS 301,Visual Effects Design,5,Information Systems,0
+MMS 302,Multimedia Capstone Project and Research 1,5,Information Systems,0
+MMS 307,UX/UI design,5,Information Systems,0
+MMS 308,Engineering and Computer Graphics,5,Information Systems,0
+MMS 309,Multimedia Capstone Project and Research 2,5,Information Systems,0
+MMS 310,Art for games,5,Information Systems,0
+MMS 311,Motion Design,5,Information Systems,0
+MMS 312,3D printing technologies,5,Information Systems,0
+MMS 314,Character design,5,Information Systems,0
+MMS 404,Design for Manufacturing,5,Information Systems,0
+MMS 421,Artpreneurship,5,Information Systems,1
+PED 465,Inclusive education,5,General Education,1
+SDS 208,Operations Research,5,Data Science,1
+SDS 306,Simulation modeling,5,Data Science,1
+SDS 417,Topological Data Analysis,5,Data Science,1
+SOE 301,Methods and means of information Security,5,Computer Science,1
+SOE 302,Programming in high-level languages,5,Computer Science,0
+SOE 303,Modelling and development of neural networks,5,Data Science,0
+SOE 305,Pattern Recognition,5,Data Science,0
+SOE 306,Web programming,5,Computer Science,0
+SOE 307,Data mining,5,Data Science,0
+SOE 308,Advanced Frontend,5,Computer Science,0
+SOE 320,Game Development,5,Computer Science,0
+SOE 321,Development of multimedia applications,5,Computer Science,0
+SOE 410,Professional Ethics in computing technology,5,Computer Science,1
+SOE 411,Natural Language Processing,5,Data Science,0
+SOE 412,Embedded Systems,5,Computer Science,0
+SOE 481,Industrial practice 4,5,Computer Science,0
+SOE 492,Graduation exam,5,Computer Science,0
+SOE 493,Diploma defence,5,Computer Science,0
+SOE 497,Pregraduational practice,5,Computer Science,0

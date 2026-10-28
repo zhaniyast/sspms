@@ -1,0 +1,318 @@
+﻿Course Code,Course Name
+CSS 105,Fundamentals of Programming I
+CSS 108,Programming Technologies and Educational Practice
+CSS 109,Calculus 1
+CSS 110,Calculus 2
+CSS 112,Physics 1
+CSS 113,Electronics
+CSS 114,Programming Fundamentals (Java) I and educational practice
+CSS 115,Programming Fundamentals (Python) I and educational practice
+CSS 116,Programming Fundamentals (Java) II and educational practice
+CSS 117,Programming Fundamentals (Python) II and educational practice
+CSS 118,AI fundamentals
+CSS 119,ROS & Robot Software Architecture
+CSS 120,Autonomous systems
+CSS 206,Database Management Systems 1
+CSS 214,Introduction to iOS Programming
+CSS 216,Mobile Application Development
+CSS 223,C# Object Oriented Programming
+CSS 225,Web programming fundamentals
+CSS 231,Web programming: front end
+CSS 232,Web programming: back end
+CSS 251,Physics 2
+CSS 254,Digital design
+CSS 262,Linux administration & Nix systems for Cybersecurity
+CSS 305,Database Management Systems 2
+CSS 306,Cyber Security
+CSS 309,Low-level Architecture
+CSS 312,Computer Networks 1
+CSS 319,Software Testing and Validation
+CSS 324,Introduction to Machine Learning
+CSS 328,Introduction to Data Analysis
+CSS 342,Software Engineering
+CSS 345,Advanced computer architecture
+CSS 346,FPGA Programming
+CSS 350,Cloud Computing
+CSS 354,Generative models
+CSS 356,Introduction to IoT
+CSS 360,Network Security
+CSS 361,Web Application Security
+CSS 365,Ethical Hacking and Penetration Testing
+CSS 382,Industrial practice 1
+CSS 388,Hardware security
+CSS 390,Financial Technology (FinTech)
+CSS 410,tools and
+CSS 421,Computer Vision
+CSS 422,Industrial Practice 3
+CSS 423,Applied Artificial Intelligence
+CSS 424,Pregraduational practice
+CSS 434,Business analytics
+CSS 436,Recommender systems
+CSS 437,Game Development
+CSS 439,Distributed Big Data Systems
+CSS 450,Industrial project (Introduction)
+CSS 451,Industrial project (Development)
+CSS 452,Industrial project (Design)
+CSS 453,Industrial project (Testing)
+CSS 458,Robot manipulators
+CSS 459,Mobile robots
+CSS 460,Drone systems & Aerial Robotics
+CSS 461,Large Language Models
+CSS 462,Introduction to robotics
+CSS 469,IT in Education (EdTech)
+CSS 470,"Robot Simulation (Gazebo, Isaac Sim)"
+CSS 473,MLOps (Machine Learning Operation)
+CSS 479,Рreparing and passing a comprehensive exam
+CSS 487,"Writing and defending a diploma thesis, diploma project"
+CSS 550,Passing a comprehensive exam
+CSS 551,Writing and defense of thesis
+CSS 727,Artificial Intelligence in Education
+ECO 328,Research Methods
+INF 106,Information and Communication Technologies
+INF 110,"Design, Communication and Presentation"
+INF 111,Principles of Web Development
+INF 137,Mathematics for Information Systems 1
+INF 138,Mathematics for Information Systems 2
+INF 202,Management
+INF 203,Information security
+INF 213,Digital Ethics
+INF 217,to Business
+INF 228,UX/UI design
+INF 300,Product management
+INF 314,Computer networks 2
+INF 318,Introduction to Testing
+INF 321,Machine Learning
+INF 323,Data analysis
+INF 324,Computer vision
+INF 332,Enterprise Architecture
+INF 337,Deep Learning
+INF 338,Linux Administration
+INF 344,IT security and Risk Management
+INF 345,Fundamentals of DevOps
+INF 346,UX/UI design
+INF 347,Fundamentals of Cyber Security
+INF 365,Fundamentals of Finance
+INF 368,The Go programming language
+INF 370,User Interface Design
+INF 371,Automation in Testing
+INF 374,Process
+INF 376,Natural Language Processing
+INF 378,AWS Cloud Computing
+INF 382,Business Process Modelling
+INF 390,Advanced DevOps
+INF 392,Blockchain technology
+INF 406,Data Ethics & Applied Analytics
+INF 410,Introduction to Building Information Modelling
+INF 412,IT Asset Management
+INF 414,"IT Governance, Risk, Compliance"
+INF 415,Leadership in IT
+INF 421,Security in Computer Networks
+INF 423,Statistics and Visualization for Data Analysis
+INF 425,Wireless networks
+INF 448,Big Data Analytics
+INF 998,MLOps
+MAT 106,Information and Communication Technologies
+MAT 123,Linear Algebra
+MAT 125,Discrete mathematics
+MAT 126,Mathematical Statistics & Theory of Probability 1
+MAT 127,Additional chapters of mathematical analysis
+MAT 128,Number theory
+MAT 129,Symbolic logic
+MAT 131,Symmetric Functions theory
+MAT 132,Spectral theory
+MAT 144,Scientific Methodology and Analysis
+MAT 145,Mathematical Olympiad Problems 1
+MAT 146,Mathematical Olympiad Problems 2
+MAT 149,Introduction to Lie Algebra
+MAT 151,Linear Algebra
+MAT 156,Discrete Mathematics
+MAT 171,History of Kazakhstan
+MAT 172,Philosophy
+MAT 212,Symbolic logic
+MAT 291,Physical Education 1
+MAT 292,Physical Education 2
+MAT 293,Physical Education 3
+MAT 294,Physical Education 4
+MAT 313,Model theory
+MAT 315,Differential geometry and topology
+MAT 319,Numerical methods of mathematical physics
+MAT 324,Mathematical Statistics
+MAT 326,Logic and Model theory
+MAT 331,Optimization methods
+MAT 332,Additional chapters of mathematical analysis
+MAT 335,Galois theory and educational practice
+MAT 336,Fourier analysis and educational practice
+MAT 337,Data Science and educational practice
+MAT 338,Measure theory and integration and educational practice
+MAT 339,Applied statistics
+MAT 340,Mathematical Finance: An Introduction to Option Pricing
+MAT 341,Regression Analysis
+MAT 364,Cryptography
+MAT 382,Control Theory
+MAT 399,Algebraic geometry
+MAT 402,Graduation thesis
+MAT 409,Pregraduational practice
+MAT 410,Enumerative Combinatorics
+MAT 425,Galois Theory
+MAT 426,Number theory
+MAT 433,Theory of interest rates and random processes in life insurance
+MAT 434,Actuarial principles and their applications
+MAT 439,State exams
+MAT 443,Graph Theory
+MAT 445,Game theory
+MAT 448,Industrial project 1
+MAT 449,Industrial project 2
+MAT 450,Industrial project 3
+MAT 451,Industrial project 4
+MAT 464,practise
+MAT 465,Theory of Groebner bases
+MAT 467,Theory of distributions
+MAT 468,"Computational fluid dynamics, thermodynamics"
+MAT 469,Applied statistics
+MAT 470,Enumerative combinatorics
+MAT 472,Geometric and Functional inequalities
+MAT 474,Numerical methods of mathematical physics
+MAT 476,Mathematical Finance: An Introduction to Option Pricing
+MAT 478,Representation Theory
+MAT 483,Simulation and modeling of natural processes
+MAT 484,Design Of Experiments
+MAT 486,Mathematical logic
+MAT 493,Thesis defense
+MAT 495,Project defense
+MAT 515,Partial differential equations and its applications
+MCM 103,Calculus 1
+MCM 104,Algorithms and programming 1
+MCM 106,Simulation modelling
+MCM 109,Calculus 2
+MCM 302,Numerical methods
+MCM 308,Heat and Mass Transfer Modeling
+MCM 309,Mathematical Statistics in R
+MCM 310,Numerical methods
+MCM 311,Optimization methods
+MCM 312,Thermodynamics
+MCM 315,Simulation and modeling of natural processes
+MCM 317,Database Management Systems
+MCM 405,Numerical Methods of Monte Carlo
+MCM 406,Industrial internship 2
+MCM 409,Thesis defense
+MCM 410,Project defense
+MCM 416,Industrial internship
+MDE 001,General English (A1 level)
+MDE 002,General English (A2 level)
+MDE 003,General English (B1 level)
+MDE 011,Kazakh Language 1 (A2 level)
+MDE 012,Kazakh Language 2 (B1 level)
+MDE 021,Russian Language 1 (А2 level)
+MDE 022,Russian Language 2 (B1 level)
+MDE 103,Foreign Language 1 (English for Academic Purposes - B1 level )
+MDE 104,Foreign Language 1 (English for Academic Purposes - B2 level)
+MDE 106,Foreign Language 2 (English for Academic Purposes - B2+ level)
+MDE 107,Foreign Language 1 (English language - A1 level)
+MDE 108,Foreign Language 2 (English language - A1+ level)
+MDE 109,Foreign Language 1 (English language - A2 level)
+MDE 110,Foreign Language 2 (English language - A2+ level)
+MDE 111,Kazakh Language 1 (А1 level/ for foreigners)
+MDE 112,Kazakh Language 2 (А2 level/for foreigners)
+MDE 113,Kazakh Language 1 (B1 level)
+MDE 114,Kazakh Language 2 (B1 level)
+MDE 115,Kazakh Language 1 (B2 level)
+MDE 116,Kazakh Language 2 (B2 level)
+MDE 117,Kazakh Language 1 (C1 level)
+MDE 118,Kazakh Language 2 (C1 level)
+MDE 120,Kazakh Language 2 (B1 level) (SDU Business School )
+MDE 121,Russian Language 1 (А1 level/ for foreigners)
+MDE 122,Russian Language 2 (А2 level/ for foreigners)
+MDE 123,Russian Language 1 (B1 level)
+MDE 124,Russian Language 2 (B1 level)
+MDE 125,Russian Language 1 (B2 level)
+MDE 126,Russian Language 2 (B2 level)
+MDE 127,Russian Language 1 (C1 level)
+MDE 128,Russian Language 2 (C1 level)
+MDE 129,Kazakh Language 2 (B2 level) (SDU Business School )
+MDE 130,Kazakh Language 2 (C1 level) (SDU Business School )
+MDE 147,Russian Language 2 (А2 level/ for foreigners)
+MDE 148,Russian Language 2 (B1 level) (SDU Business School )
+MDE 149,Russian Language 2 (B2 level) (SDU Business School )
+MDE 150,Russian Language 2 (C1 level) (SDU Business School )
+MDE 151,Module of Social and Political Knowledge (Political Science)
+MDE 152,Module of Social and Political Knowledge (Sociology)
+MDE 153,Module of Social and Political Knowledge (Cultural Studies)
+MDE 154,Module of Social and Political Knowledge (Psychology)
+MDE 156,Foreign Language 1 (English for Academic Purposes - B1 level )
+MDE 157,Foreign Language 1 (English for Academic Purposes - B2 level)
+MDE 158,Foreign Language 2 (English for Specific Purposes - B2+ level)
+MDE 160,Community engagement and value based Society 1
+MDE 161,Еconomy
+MDE 162,Law
+MDE 163,Fundamentals of anti-corruption culture
+MDE 164,Ecology and sustainable development
+MDE 165,General Security
+MDE 166,Еntrepreneurship
+MDE 170,Community engagement and value based Society 2
+MDE 171,History of Kazakhstan
+MDE 172,Philosophy
+MDE 187,Foreign Language 2 (English for Academic Purposes - B1+ level )
+MDE 188,Foreign Language 2 (English for Academic Purposes - B1+ level )
+MDE 190,Foreign Language 1 (English for Academic Purposes - B1 level )
+MDE 191,Foreign Language 2 (English for Academic Purposes - B1+ level )
+MDE 192,Foreign Language 1 (English for Academic Purposes - B2 level)
+MDE 194,Foreign Language 2 (English for Specific Purposes - B2+ level)
+MDE 195,Foreign Language 1 (General English - A2 level)
+MDE 196,Foreign Language 2 (English language - A2+ level)
+MDE 197,Foreign Language 1 (English for Academic Purposes - B1 level )
+MDE 198,Foreign Language 2 (English for Academic Purposes - B1+ level )
+MDE 199,Foreign Language 1 (English for Academic Purposes - B2 level)
+MDE 200,Foreign Language 2 (English for Specific Purposes - B2+ level)
+MDE 283,Turkish language 1 (А1 level)
+MDE 284,Turkish language 2 (А2 level)
+MDE 285,Turkish language 1 (B1 level)
+MDE 286,Turkish language 2 (B2 level)
+MDE 289,Financial literacy
+MDE 291,Physical Education 1
+MDE 292,Physical Education 2
+MDE 293,Physical Education 3
+MDE 294,Physical Education 4
+MMS 101,Computer Programming 1
+MMS 102,Introduction to Multimedia Computing
+MMS 103,Fundamentals of design
+MMS 105,Computer programming 2
+MMS 108,Information and Communication Technologies (in English)
+MMS 112,"Design History, Theory and Criticism"
+MMS 115,Graphic Design
+MMS 116,Artificial Intelligence in Multimedia Design
+MMS 117,Mathematics for Multimedia
+MMS 202,3D modeling (basics for character modeling)
+MMS 203,Photography and Video production
+MMS 205,3D Animation
+MMS 207,Creative projects management
+MMS 301,Visual Effects Design
+MMS 302,Multimedia Capstone Project and Research 1
+MMS 307,UX/UI design
+MMS 308,Engineering and Computer Graphics
+MMS 309,Multimedia Capstone Project and Research 2
+MMS 310,Art for games
+MMS 311,Motion Design
+MMS 312,3D printing technologies
+MMS 314,Character design
+MMS 404,Design for Manufacturing
+MMS 421,Artpreneurship
+PED 465,Inclusive education
+SDS 208,Operations Research
+SDS 306,Simulation modeling
+SDS 417,Topological Data Analysis
+SOE 301,Methods and means of information Security
+SOE 302,Programming in high-level languages
+SOE 303,Modelling and development of neural networks
+SOE 305,Pattern Recognition
+SOE 306,Web programming
+SOE 307,Data mining
+SOE 308,Advanced Frontend
+SOE 320,Game Development
+SOE 321,Development of multimedia applications
+SOE 410,Professional Ethics in computing technology
+SOE 411,Natural Language Processing
+SOE 412,Embedded Systems
+SOE 481,Industrial practice 4
+SOE 492,Graduation exam
+SOE 493,Diploma defence
+SOE 497,Pregraduational practice

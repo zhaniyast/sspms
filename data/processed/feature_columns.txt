@@ -1,0 +1,16 @@
+num_of_prev_attempts
+studied_credits
+avg_weekly_clicks
+total_clicks
+avg_active_days
+total_materials
+silent_weeks
+clicks_last_2w
+clicks_first_2w
+click_trend
+n_submitted
+mean_score
+min_score
+points_earned
+n_missed
+submitted_share

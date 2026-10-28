@@ -1,0 +1,1041 @@
+{
+ "model": "RandomForest (tuned)",
+ "threshold": 0.505,
+ "recall_mean": 0.7,
+ "recall_sd": 0.077,
+ "prediction_week": 6,
+ "cohort": "CCC-2014J",
+ "names": "synthetic placeholders; student ids are the real OULAD ids",
+ "students": [
+  {
+   "id": 679539,
+   "name": "Kairat Ilyas",
+   "course": "CCC 2014J",
+   "risk": 0.991,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "assignments missed",
+     "value": 2.0,
+     "average": 0.0,
+     "weight": 0.123
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.0,
+     "average": 1.0,
+     "weight": 0.096
+    },
+    {
+     "label": "average score so far",
+     "value": 0.0,
+     "average": 73.0,
+     "weight": 0.076
+    }
+   ]
+  },
+  {
+   "id": 638040,
+   "name": "Rustem Serik",
+   "course": "CCC 2014J",
+   "risk": 0.99,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "assignments missed",
+     "value": 2.0,
+     "average": 0.0,
+     "weight": 0.139
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.0,
+     "average": 1.0,
+     "weight": 0.102
+    },
+    {
+     "label": "average score so far",
+     "value": 0.0,
+     "average": 73.0,
+     "weight": 0.074
+    }
+   ]
+  },
+  {
+   "id": 578000,
+   "name": "Dias Mukan",
+   "course": "CCC 2014J",
+   "risk": 0.904,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 20.0,
+     "average": 73.0,
+     "weight": 0.222
+    },
+    {
+     "label": "lowest score so far",
+     "value": 20.0,
+     "average": 70.0,
+     "weight": 0.18
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.5,
+     "average": 1.0,
+     "weight": 0.039
+    }
+   ]
+  },
+  {
+   "id": 637325,
+   "name": "Ayana Abenov",
+   "course": "CCC 2014J",
+   "risk": 0.896,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 6.0,
+     "average": 73.0,
+     "weight": 0.185
+    },
+    {
+     "label": "lowest score so far",
+     "value": 6.0,
+     "average": 70.0,
+     "weight": 0.159
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.5,
+     "average": 1.0,
+     "weight": 0.105
+    }
+   ]
+  },
+  {
+   "id": 479649,
+   "name": "Alina Kenzhe",
+   "course": "CCC 2014J",
+   "risk": 0.862,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 44.0,
+     "average": 73.0,
+     "weight": 0.175
+    },
+    {
+     "label": "lowest score so far",
+     "value": 44.0,
+     "average": 70.0,
+     "weight": 0.134
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.069
+    }
+   ]
+  },
+  {
+   "id": 2373648,
+   "name": "Ulan Orazbek",
+   "course": "CCC 2014J",
+   "risk": 0.798,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 56.0,
+     "average": 73.0,
+     "weight": 0.144
+    },
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.107
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.5,
+     "average": 1.0,
+     "weight": 0.091
+    }
+   ]
+  },
+  {
+   "id": 622890,
+   "name": "Laura Ilyas",
+   "course": "CCC 2014J",
+   "risk": 0.742,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 56.0,
+     "average": 73.0,
+     "weight": 0.128
+    },
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.087
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.077
+    }
+   ]
+  },
+  {
+   "id": 697460,
+   "name": "Aidos Bolat",
+   "course": "CCC 2014J",
+   "risk": 0.737,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 53.0,
+     "average": 73.0,
+     "weight": 0.24
+    },
+    {
+     "label": "lowest score so far",
+     "value": 44.0,
+     "average": 70.0,
+     "weight": 0.186
+    },
+    {
+     "label": "clicks in the last 2 weeks",
+     "value": 15.0,
+     "average": 36.0,
+     "weight": 0.023
+    }
+   ]
+  },
+  {
+   "id": 610681,
+   "name": "Olzhas Tasmagambet",
+   "course": "CCC 2014J",
+   "risk": 0.701,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.11
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.5,
+     "average": 1.0,
+     "weight": 0.108
+    },
+    {
+     "label": "clicks in the last 2 weeks",
+     "value": 11.0,
+     "average": 36.0,
+     "weight": 0.052
+    }
+   ]
+  },
+  {
+   "id": 689759,
+   "name": "Miras Zhumabek",
+   "course": "CCC 2014J",
+   "risk": 0.619,
+   "flag": true,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 63.0,
+     "average": 73.0,
+     "weight": 0.095
+    },
+    {
+     "label": "lowest score so far",
+     "value": 44.0,
+     "average": 70.0,
+     "weight": 0.091
+    },
+    {
+     "label": "clicks in the first 2 weeks",
+     "value": 6.0,
+     "average": 55.0,
+     "weight": 0.038
+    }
+   ]
+  },
+  {
+   "id": 266097,
+   "name": "Aidana Mukan",
+   "course": "CCC 2014J",
+   "risk": 0.613,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 56.0,
+     "average": 73.0,
+     "weight": 0.094
+    },
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.083
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.022
+    }
+   ]
+  },
+  {
+   "id": 613122,
+   "name": "Sanzhar Orazbek",
+   "course": "CCC 2014J",
+   "risk": 0.606,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.082
+    },
+    {
+     "label": "average score so far",
+     "value": 60.0,
+     "average": 73.0,
+     "weight": 0.061
+    },
+    {
+     "label": "assignments submitted",
+     "value": 2.0,
+     "average": 1.0,
+     "weight": 0.034
+    }
+   ]
+  },
+  {
+   "id": 620484,
+   "name": "Aisha Mukan",
+   "course": "CCC 2014J",
+   "risk": 0.604,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 56.0,
+     "average": 73.0,
+     "weight": 0.133
+    },
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.12
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.05
+    }
+   ]
+  },
+  {
+   "id": 655051,
+   "name": "Aizhan Bolat",
+   "course": "CCC 2014J",
+   "risk": 0.594,
+   "flag": true,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 61.0,
+     "average": 73.0,
+     "weight": 0.092
+    },
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.057
+    },
+    {
+     "label": "total clicks in weeks 1-6",
+     "value": 266.0,
+     "average": 174.0,
+     "weight": 0.021
+    }
+   ]
+  },
+  {
+   "id": 592997,
+   "name": "Timur Abenov",
+   "course": "CCC 2014J",
+   "risk": 0.575,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 67.0,
+     "average": 73.0,
+     "weight": 0.075
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.034
+    },
+    {
+     "label": "lowest score so far",
+     "value": 67.0,
+     "average": 70.0,
+     "weight": 0.027
+    }
+   ]
+  },
+  {
+   "id": 547612,
+   "name": "Asel Orazbek",
+   "course": "CCC 2014J",
+   "risk": 0.564,
+   "flag": true,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 66.0,
+     "average": 73.0,
+     "weight": 0.066
+    },
+    {
+     "label": "lowest score so far",
+     "value": 44.0,
+     "average": 70.0,
+     "weight": 0.046
+    },
+    {
+     "label": "distinct course materials opened",
+     "value": 44.0,
+     "average": 32.0,
+     "weight": 0.029
+    }
+   ]
+  },
+  {
+   "id": 400958,
+   "name": "Merey Zhumabek",
+   "course": "CCC 2014J",
+   "risk": 0.508,
+   "flag": true,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "average score so far",
+     "value": 63.0,
+     "average": 73.0,
+     "weight": 0.086
+    },
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.061
+    },
+    {
+     "label": "active days per week",
+     "value": 1.5,
+     "average": 1.8,
+     "weight": 0.004
+    }
+   ]
+  },
+  {
+   "id": 596981,
+   "name": "Arman Serik",
+   "course": "CCC 2014J",
+   "risk": 0.403,
+   "flag": false,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "lowest score so far",
+     "value": 56.0,
+     "average": 70.0,
+     "weight": 0.068
+    },
+    {
+     "label": "assignments submitted",
+     "value": 2.0,
+     "average": 1.0,
+     "weight": 0.012
+    },
+    {
+     "label": "average score so far",
+     "value": 70.0,
+     "average": 73.0,
+     "weight": 0.007
+    }
+   ]
+  },
+  {
+   "id": 330966,
+   "name": "Dana Sadyk",
+   "course": "CCC 2014J",
+   "risk": 0.377,
+   "flag": false,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "clicks in the last 2 weeks",
+     "value": 5.0,
+     "average": 36.0,
+     "weight": 0.035
+    },
+    {
+     "label": "clicks in the first 2 weeks",
+     "value": 31.0,
+     "average": 55.0,
+     "weight": 0.023
+    }
+   ]
+  },
+  {
+   "id": 598963,
+   "name": "Daniyar Kenzhe",
+   "course": "CCC 2014J",
+   "risk": 0.333,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "distinct course materials opened",
+     "value": 36.0,
+     "average": 32.0,
+     "weight": 0.014
+    },
+    {
+     "label": "average clicks per week",
+     "value": 23.2,
+     "average": 29.0,
+     "weight": 0.009
+    },
+    {
+     "label": "total clicks in weeks 1-6",
+     "value": 139.0,
+     "average": 174.0,
+     "weight": 0.008
+    }
+   ]
+  },
+  {
+   "id": 324338,
+   "name": "Aruzhan Ilyas",
+   "course": "CCC 2014J",
+   "risk": 0.33,
+   "flag": false,
+   "actual_at_risk": 1,
+   "factors": [
+    {
+     "label": "clicks in the first 2 weeks",
+     "value": 41.0,
+     "average": 55.0,
+     "weight": 0.018
+    },
+    {
+     "label": "clicks in the last 2 weeks",
+     "value": 14.0,
+     "average": 36.0,
+     "weight": 0.011
+    },
+    {
+     "label": "total clicks in weeks 1-6",
+     "value": 162.0,
+     "average": 174.0,
+     "weight": 0.007
+    }
+   ]
+  },
+  {
+   "id": 687206,
+   "name": "Aruzhan Abenov",
+   "course": "CCC 2014J",
+   "risk": 0.305,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "clicks in the last 2 weeks",
+     "value": 3.0,
+     "average": 36.0,
+     "weight": 0.064
+    },
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": -389.0,
+     "average": -12.0,
+     "weight": 0.017
+    }
+   ]
+  },
+  {
+   "id": 687877,
+   "name": "Damir Serik",
+   "course": "CCC 2014J",
+   "risk": 0.3,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "clicks in the first 2 weeks",
+     "value": 46.0,
+     "average": 55.0,
+     "weight": 0.018
+    },
+    {
+     "label": "active days per week",
+     "value": 2.2,
+     "average": 1.8,
+     "weight": 0.009
+    },
+    {
+     "label": "distinct course materials opened",
+     "value": 37.0,
+     "average": 32.0,
+     "weight": 0.004
+    }
+   ]
+  },
+  {
+   "id": 495438,
+   "name": "Kamila Bolat",
+   "course": "CCC 2014J",
+   "risk": 0.294,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "distinct course materials opened",
+     "value": 64.0,
+     "average": 32.0,
+     "weight": 0.032
+    },
+    {
+     "label": "total clicks in weeks 1-6",
+     "value": 464.0,
+     "average": 174.0,
+     "weight": 0.029
+    },
+    {
+     "label": "average clicks per week",
+     "value": 77.3,
+     "average": 29.0,
+     "weight": 0.027
+    }
+   ]
+  },
+  {
+   "id": 598299,
+   "name": "Yerlan Zhumabek",
+   "course": "CCC 2014J",
+   "risk": 0.283,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": -238.0,
+     "average": -12.0,
+     "weight": 0.06
+    },
+    {
+     "label": "distinct course materials opened",
+     "value": 82.0,
+     "average": 32.0,
+     "weight": 0.009
+    },
+    {
+     "label": "active days per week",
+     "value": 6.0,
+     "average": 1.8,
+     "weight": 0.009
+    }
+   ]
+  },
+  {
+   "id": 675638,
+   "name": "Gulnaz Tasmagambet",
+   "course": "CCC 2014J",
+   "risk": 0.247,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "credit load this term",
+     "value": 120.0,
+     "average": 60.0,
+     "weight": 0.01
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.5,
+     "average": 1.0,
+     "weight": 0.009
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.002
+    }
+   ]
+  },
+  {
+   "id": 336131,
+   "name": "Madina Abenov",
+   "course": "CCC 2014J",
+   "risk": 0.238,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "share of due assignments submitted",
+     "value": 0.5,
+     "average": 1.0,
+     "weight": 0.022
+    },
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.013
+    },
+    {
+     "label": "weeks with no activity at all",
+     "value": 0.0,
+     "average": 1.0,
+     "weight": 0.007
+    }
+   ]
+  },
+  {
+   "id": 676916,
+   "name": "Saltanat Orazbek",
+   "course": "CCC 2014J",
+   "risk": 0.235,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "credit load this term",
+     "value": 180.0,
+     "average": 60.0,
+     "weight": 0.034
+    },
+    {
+     "label": "weeks with no activity at all",
+     "value": 0.0,
+     "average": 1.0,
+     "weight": 0.008
+    },
+    {
+     "label": "assignments submitted",
+     "value": 1.0,
+     "average": 1.0,
+     "weight": 0.0
+    }
+   ]
+  },
+  {
+   "id": 586497,
+   "name": "Alikhan Ilyas",
+   "course": "CCC 2014J",
+   "risk": 0.233,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "clicks in the first 2 weeks",
+     "value": 11.0,
+     "average": 55.0,
+     "weight": 0.078
+    },
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": 97.0,
+     "average": -12.0,
+     "weight": 0.006
+    },
+    {
+     "label": "share of due assignments submitted",
+     "value": 1.0,
+     "average": 1.0,
+     "weight": 0.0
+    }
+   ]
+  },
+  {
+   "id": 1773925,
+   "name": "Symbat Tasmagambet",
+   "course": "CCC 2014J",
+   "risk": 0.23,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "credit load this term",
+     "value": 210.0,
+     "average": 60.0,
+     "weight": 0.022
+    },
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": -760.0,
+     "average": -12.0,
+     "weight": 0.014
+    },
+    {
+     "label": "distinct course materials opened",
+     "value": 56.0,
+     "average": 32.0,
+     "weight": 0.003
+    }
+   ]
+  },
+  {
+   "id": 648369,
+   "name": "Askar Zhumabek",
+   "course": "CCC 2014J",
+   "risk": 0.213,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "assignments missed",
+     "value": 1.0,
+     "average": 0.0,
+     "weight": 0.006
+    }
+   ]
+  },
+  {
+   "id": 679451,
+   "name": "Erbol Mukan",
+   "course": "CCC 2014J",
+   "risk": 0.2,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": -201.0,
+     "average": -12.0,
+     "weight": 0.03
+    },
+    {
+     "label": "weeks with no activity at all",
+     "value": 0.0,
+     "average": 1.0,
+     "weight": 0.006
+    }
+   ]
+  },
+  {
+   "id": 336772,
+   "name": "Nuray Serik",
+   "course": "CCC 2014J",
+   "risk": 0.141,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "clicks in the first 2 weeks",
+     "value": 41.0,
+     "average": 55.0,
+     "weight": 0.011
+    },
+    {
+     "label": "distinct course materials opened",
+     "value": 50.0,
+     "average": 32.0,
+     "weight": 0.006
+    },
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": 27.0,
+     "average": -12.0,
+     "weight": 0.003
+    }
+   ]
+  },
+  {
+   "id": 591891,
+   "name": "Nurlan Sadyk",
+   "course": "CCC 2014J",
+   "risk": 0.138,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "distinct course materials opened",
+     "value": 41.0,
+     "average": 32.0,
+     "weight": 0.004
+    },
+    {
+     "label": "average clicks per week",
+     "value": 45.5,
+     "average": 29.0,
+     "weight": 0.002
+    }
+   ]
+  },
+  {
+   "id": 692105,
+   "name": "Aknur Kenzhe",
+   "course": "CCC 2014J",
+   "risk": 0.129,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": -45.0,
+     "average": -12.0,
+     "weight": 0.009
+    }
+   ]
+  },
+  {
+   "id": 635573,
+   "name": "Tomiris Sadyk",
+   "course": "CCC 2014J",
+   "risk": 0.121,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": 108.0,
+     "average": -12.0,
+     "weight": 0.021
+    },
+    {
+     "label": "credit load this term",
+     "value": 30.0,
+     "average": 60.0,
+     "weight": 0.002
+    }
+   ]
+  },
+  {
+   "id": 685964,
+   "name": "Zhanel Sadyk",
+   "course": "CCC 2014J",
+   "risk": 0.112,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "credit load this term",
+     "value": 120.0,
+     "average": 60.0,
+     "weight": 0.001
+    }
+   ]
+  },
+  {
+   "id": 512259,
+   "name": "Zarina Tasmagambet",
+   "course": "CCC 2014J",
+   "risk": 0.108,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "distinct course materials opened",
+     "value": 38.0,
+     "average": 32.0,
+     "weight": 0.001
+    }
+   ]
+  },
+  {
+   "id": 608978,
+   "name": "Bekzat Bolat",
+   "course": "CCC 2014J",
+   "risk": 0.097,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "share of due assignments submitted",
+     "value": 1.0,
+     "average": 1.0,
+     "weight": 0.0
+    }
+   ]
+  },
+  {
+   "id": 651759,
+   "name": "Nurzhan Kenzhe",
+   "course": "CCC 2014J",
+   "risk": 0.093,
+   "flag": false,
+   "actual_at_risk": 0,
+   "factors": [
+    {
+     "label": "credit load this term",
+     "value": 120.0,
+     "average": 60.0,
+     "weight": 0.012
+    },
+    {
+     "label": "change in activity (last 2 weeks vs first 2)",
+     "value": 85.0,
+     "average": -12.0,
+     "weight": 0.004
+    },
+    {
+     "label": "previous attempts at this course",
+     "value": 0.0,
+     "average": 0.0,
+     "weight": 0.0
+    }
+   ]
+  }
+ ]
+}

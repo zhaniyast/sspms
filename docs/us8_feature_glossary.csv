@@ -1,0 +1,17 @@
+column,plain_language
+num_of_prev_attempts,previous attempts at this course
+studied_credits,credit load this term
+avg_weekly_clicks,average clicks per week
+total_clicks,total clicks in weeks 1-6
+avg_active_days,active days per week
+total_materials,distinct course materials opened
+silent_weeks,weeks with no activity at all
+clicks_last_2w,clicks in the last 2 weeks
+clicks_first_2w,clicks in the first 2 weeks
+click_trend,change in activity (last 2 weeks vs first 2)
+n_submitted,assignments submitted
+mean_score,average score so far
+min_score,lowest score so far
+points_earned,weighted points earned so far
+n_missed,assignments missed
+submitted_share,share of due assignments submitted
