@@ -189,13 +189,65 @@ def start_direct():
 @bp.get('/announcements')
 @login_required()
 def announcements():
+    '''Объявления, которые видит пользователь: общие по университету, по курсам, где он учится
+    или которые ведёт. can_delete = это его собственное объявление (или он админ).'''
     c = conn(); u = me()
-    return jsonify(items=rows(c, '''
-        SELECT a.id, a.title, a.body, a.published_at, a.offering_id FROM announcements a
-        WHERE a.published_at <= now() AND (a.offering_id IS NULL
+    items = rows(c, '''
+        SELECT a.id, a.title, a.body, a.published_at, a.offering_id, a.author_id,
+               co.code AS course_code, co.name AS course_name,
+               COALESCE(t.first_name || ' ' || t.last_name, 'University') AS author
+        FROM announcements a
+        LEFT JOIN course_offerings o ON o.id = a.offering_id
+        LEFT JOIN courses co ON co.id = o.course_id
+        LEFT JOIN teachers t ON t.user_id = a.author_id
+        WHERE a.published_at <= now() AND (a.offering_id IS NULL OR %(admin)s
               OR EXISTS (SELECT 1 FROM enrollments e WHERE e.offering_id = a.offering_id AND e.student_id = %(u)s)
-              OR EXISTS (SELECT 1 FROM course_offerings o WHERE o.id = a.offering_id AND o.teacher_id = %(u)s))
-        ORDER BY a.published_at DESC LIMIT 30''', {'u': u['id']}))
+              OR o.teacher_id = %(u)s
+              OR EXISTS (SELECT 1 FROM offering_staff f WHERE f.offering_id = a.offering_id AND f.teacher_id = %(u)s))
+        ORDER BY a.published_at DESC, a.id DESC LIMIT 50''', {'u': u['id'], 'admin': u['role'] == 'admin'})
+    for x in items:
+        x['can_delete'] = u['role'] == 'admin' or x['author_id'] == u['id']
+    return jsonify(items=items)
+
+
+@bp.post('/announcements')
+@login_required('teacher', 'admin')
+def add_announcement():
+    '''Преподаватель публикует объявление для своего курса. Общее (без курса) может только админ.'''
+    c = conn(); u = me()
+    d = request.get_json(force=True)
+    title, body = (d.get('title') or '').strip(), (d.get('body') or '').strip()
+    oid = d.get('offering_id')
+    if not title or not body or len(title) > 200 or len(body) > 5000:
+        return jsonify(error='bad_request'), 400
+    if oid is None:
+        if u['role'] != 'admin':
+            return jsonify(error='forbidden'), 403
+    else:
+        try:
+            oid = int(oid)
+        except (TypeError, ValueError):
+            return jsonify(error='bad_request'), 400
+        if not teaches(c, u['id'], oid, u['role']):
+            return jsonify(error='forbidden'), 403
+    new = run(c, '''INSERT INTO announcements (author_id, offering_id, title, body)
+                    VALUES (%(u)s, %(o)s, %(t)s, %(b)s) RETURNING id''', {'u': u['id'], 'o': oid, 't': title, 'b': body})
+    c.commit()
+    return jsonify(id=new[0]['id']), 201
+
+
+@bp.delete('/announcements/<int:aid>')
+@login_required('teacher', 'admin')
+def delete_announcement(aid):
+    c = conn(); u = me()
+    a = one(c, 'SELECT author_id FROM announcements WHERE id = %(a)s', {'a': aid})
+    if not a:
+        return jsonify(error='not_found'), 404
+    if u['role'] != 'admin' and a['author_id'] != u['id']:
+        return jsonify(error='forbidden'), 403
+    run(c, 'DELETE FROM announcements WHERE id = %(a)s', {'a': aid})
+    c.commit()
+    return jsonify(ok=True)
 
 
 # ------------------------------------------------------------------ "что если"
@@ -252,3 +304,21 @@ def predict():
 def admin_recompute():
     c = conn()
     return jsonify(recompute(c))
+
+
+@bp.get('/admin/scoring-status')
+@login_required('admin')
+def scoring_status():
+    """Когда риски пересчитывались в последний раз и когда следующий запуск по расписанию."""
+    from . import scheduler
+    c = conn()
+    last = one(c, 'SELECT MAX(created_at) AS at, COUNT(*) AS n FROM risk_predictions')
+    return jsonify(schedule=scheduler.STATE, last_prediction_at=last['at'], predictions=last['n'])
+
+
+@bp.post('/admin/scoring-run')
+@login_required('admin')
+def scoring_run():
+    """Запустить пересчёт сейчас тем же способом, что и по расписанию (с блокировкой)."""
+    from . import scheduler
+    return jsonify(scheduler.run_once())

@@ -14,7 +14,7 @@ from pathlib import Path
 from flask import Flask, jsonify, send_from_directory
 from flask.json.provider import DefaultJSONProvider
 
-from . import access, routes_common, routes_student, routes_teacher, routes_syllabus
+from . import access, scheduler, routes_common, routes_student, routes_teacher, routes_syllabus, routes_import, routes_reports
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -40,8 +40,11 @@ def create_app():
         from werkzeug.middleware.proxy_fix import ProxyFix
         app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1)
     app.teardown_appcontext(access.close_conn)
-    for m in (routes_common, routes_student, routes_teacher, routes_syllabus):
+    app.config['MAX_CONTENT_LENGTH'] = 2 * 1024 * 1024      # загрузка CSV: не больше 2 МБ
+    for m in (routes_common, routes_student, routes_teacher, routes_syllabus, routes_import, routes_reports):
         app.register_blueprint(m.bp)
+
+    scheduler.start()          # ежедневный пересчёт, если задано SCORING_DAILY_AT
 
     @app.errorhandler(Exception)
     def boom(e):
@@ -59,6 +62,16 @@ def create_app():
     @app.get('/healthz')
     def healthz():
         return jsonify(ok=True)
+
+    @app.get('/readyz')
+    def readyz():
+        """Проверка вместе с базой. Её удобно опрашивать сервисом keep-warm: заодно не засыпает база."""
+        try:
+            from .db import one
+            one(access.conn(), 'SELECT 1 AS ok')
+            return jsonify(ok=True, db=True)
+        except Exception:
+            return jsonify(ok=False, db=False), 503
 
     @app.get('/')
     def index():

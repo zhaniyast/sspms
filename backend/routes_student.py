@@ -41,6 +41,71 @@ def courses():
     return jsonify(week=week, courses=out)
 
 
+@bp.get('/curriculum')
+@login_required('student')
+def curriculum():
+    """Return the full SDU course catalog, annotated with this student's record.
+
+    A catalog course is returned even when it has never been offered or the
+    student has never enrolled in it. Syllabus data is attached to an offering,
+    so offering_id is null when no offering exists yet.
+    """
+    c = conn(); uid = me()['id']
+    catalog = rows(c, """
+        SELECT co.id AS course_id, co.code, co.name, co.credits,
+               o.offering_id, o.color, o.semester, o.teacher,
+               e.enrollment_status
+        FROM courses co
+        LEFT JOIN LATERAL (
+            SELECT off.id AS offering_id, off.color, sem.name AS semester,
+                   sem.start_date,
+                   teach.first_name || ' ' || teach.last_name AS teacher
+            FROM course_offerings off
+            JOIN semesters sem ON sem.id = off.semester_id
+            LEFT JOIN teachers teach ON teach.user_id = off.teacher_id
+            WHERE off.course_id = co.id
+            ORDER BY EXISTS (
+                SELECT 1 FROM enrollments mine
+                WHERE mine.offering_id = off.id AND mine.student_id = %(u)s
+            ) DESC, sem.start_date DESC, off.id DESC
+            LIMIT 1
+        ) o ON TRUE
+        LEFT JOIN LATERAL (
+            SELECT en.status AS enrollment_status
+            FROM enrollments en
+            WHERE en.student_id = %(u)s AND en.offering_id = o.offering_id
+            LIMIT 1
+        ) e ON TRUE
+        ORDER BY co.code
+    """, {'u': uid})
+
+    out = []
+    for item in catalog:
+        offering_id = item['offering_id']
+        enrollment_status = item['enrollment_status']
+        if enrollment_status and offering_id:
+            g = weighted_grade(c, uid, offering_id)
+            done = float(g['weight_done'])
+            pct = round(float(g['earned']) / done * 100, 1) if done else None
+            status = {
+                'failed': 'Failed', 'completed': 'Passed',
+                'enrolled': 'Taken', 'dropped': 'Not Taken'
+            }.get(enrollment_status, 'Not Taken')
+            grade_letter = (letter(c, offering_id, pct) or {}).get('letter') if pct is not None else None
+            points_earned = round(float(g['earned']), 2)
+            weight_done = done
+        else:
+            pct = grade_letter = None
+            points_earned = weight_done = 0
+            status = 'Not Taken'
+
+        out.append({**item, 'status': status, 'current_percent': pct,
+                    'letter': grade_letter, 'points_earned': points_earned,
+                    'weight_done': weight_done,
+                    'syllabus_available': offering_id is not None})
+    return jsonify(courses=out, total=len(out))
+
+
 @bp.get('/courses/<int:oid>/grades')
 @login_required('student')
 def course_grades(oid):

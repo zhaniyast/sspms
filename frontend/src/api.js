@@ -167,3 +167,39 @@ export const saveGrade = (assessment_id, student_id, score, reason) =>
 export const predict = (offering_id, overrides, student_id) =>
   raw('/api/predict', 'POST', { offering_id, overrides, student_id });
 export const readAllNotifications = () => raw('/api/notifications/read-all', 'POST', {});
+
+export const loadStudentCurriculum = () => get('/api/student/curriculum');
+
+// ---------------------------------------------------------------- файлы
+// Файл с сервера (отчёт, шаблон оценок): сохраняется через браузер. Возвращает имя файла.
+export async function download(path, fallbackName = 'report.csv') {
+  const res = await fetch(`${API_BASE}${path}`, { credentials: 'include' });
+  if (!res.ok) {
+    let d = null;
+    try { d = await res.json(); } catch { /* не JSON */ }
+    const err = new Error((d && d.error) || `API ${res.status}`);
+    err.status = res.status;
+    throw err;
+  }
+  const blob = await res.blob();
+  const m = /filename="?([^";]+)"?/.exec(res.headers.get('Content-Disposition') || '');
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = m ? m[1] : fallbackName;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+  return a.download;
+}
+
+// Отправка файла (multipart). Возвращает ответ целиком и при ошибке: в нём список строк с ошибками.
+export async function upload(path, fields) {
+  const fd = new FormData();
+  Object.entries(fields).forEach(([k, v]) => { if (v !== undefined && v !== null) fd.append(k, v); });
+  const res = await fetch(`${API_BASE}${path}`, { method: 'POST', credentials: 'include', body: fd });
+  let data = null;
+  try { data = await res.json(); } catch { /* пустой ответ */ }
+  return { ok: res.ok, status: res.status, data };
+}

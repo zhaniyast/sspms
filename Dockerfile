@@ -11,7 +11,8 @@ RUN npm run build
 FROM python:3.12-slim
 WORKDIR /app
 COPY backend/requirements.txt backend/requirements.txt
-RUN pip install --no-cache-dir -r backend/requirements.txt
+# scikit-learn той же версии, на которой сохранена модель (иначе предупреждение о несовпадении версий)
+RUN pip install --no-cache-dir -r backend/requirements.txt "scikit-learn==1.8.0"
 COPY backend/ backend/
 COPY models/model_db10.joblib models/model_db10.joblib
 COPY --from=web /web/dist frontend/dist

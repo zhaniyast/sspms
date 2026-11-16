@@ -6,3 +6,6 @@ __pycache__/
 credentials.csv
 *.zip
 data/raw/
+*.dump
+.ipynb_checkpoints/
+.virtual_documents/

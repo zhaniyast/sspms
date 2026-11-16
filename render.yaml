@@ -1,0 +1,19 @@
+# Render Blueprint: один веб-сервис из Dockerfile (Flask + собранный React).
+# База данных отдельно, на Neon: её адрес вводится в панели Render при первом создании.
+# Как пользоваться: docs/DEPLOY.md
+services:
+  - type: web
+    name: sspms-portal
+    runtime: docker
+    plan: 0.5c-512mb          # самый маленький платный план (не засыпает); для пробы можно free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL     # строка подключения Neon, вида postgresql://user:pass@host/db?sslmode=require
+        sync: false
+      - key: SECRET_KEY       # подпись cookie-сессий; Render сгенерирует сам
+        generateValue: true
+      - key: SCORING_DAILY_AT # ежедневный пересчёт рисков, время UTC (22:00 UTC = 03:00 Алматы)
+        value: "22:00"

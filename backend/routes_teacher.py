@@ -8,6 +8,7 @@ from .scoring import active_model_id, bundle
 bp = Blueprint('teacher', __name__, url_prefix='/api/teacher')
 ROLES = ('teacher', 'admin')
 MIN_ANON = 5         # меньше пяти ответов отзыв показывать нельзя: автора можно угадать
+FOLLOWUP_DAYS = 14   # высокий риск без контакта дольше этого срока попадает в очередь куратора
 
 
 def _audit_by_trigger(c) -> bool:
@@ -316,21 +317,49 @@ def review_excuse(eid):
 @bp.get('/advisees')
 @login_required(*ROLES)
 def advisees():
+    """Очередь куратора: подопечные по убыванию риска и что с ними делать.
+
+    needs_attention = высокий риск и нет контакта за последние FOLLOWUP_DAYS дней,
+    либо подошла дата повторной проверки (recheck_on) из прошлого вмешательства."""
     c = conn(); u = me()
     sem, week = latest_week(c)
-    return jsonify(week=week, items=rows(c, '''
-        SELECT st.user_id AS student_id, st.first_name, st.last_name, st.group_id,
-               r.risk_probability, r.risk_level,
+    items = rows(c, '''
+        SELECT st.user_id AS student_id, us.login_id, st.first_name, st.last_name, st.group_id, sg.code AS group_code,
+               r.risk_probability, r.risk_level, pr.risk_probability AS prev_risk,
                (SELECT COUNT(*) FROM risk_predictions p JOIN course_offerings o ON o.id = p.offering_id
                  WHERE p.student_id = st.user_id AND p.week_no = %(w)s AND p.risk_level = 'high'
                    AND p.model_id = (SELECT id FROM model_versions WHERE version = %(v)s)) AS courses_at_risk,
-               (SELECT MAX(created_at) FROM interventions i WHERE i.student_id = st.user_id) AS last_contact
+               (SELECT MAX(created_at) FROM interventions i WHERE i.student_id = st.user_id) AS last_contact,
+               (SELECT COUNT(*) FROM interventions i WHERE i.student_id = st.user_id) AS contacts,
+               (SELECT MIN(recheck_on) FROM interventions i WHERE i.student_id = st.user_id
+                 AND i.recheck_on IS NOT NULL AND i.outcome IS NULL) AS recheck_on,
+               (SELECT (CURRENT_DATE - MAX(created_at)::date) FROM interventions i
+                 WHERE i.student_id = st.user_id) AS days_since_contact
         FROM advisor_assignments aa
         JOIN students st ON st.user_id = aa.student_id
+        JOIN users us ON us.id = st.user_id
+        LEFT JOIN student_groups sg ON sg.id = st.group_id
         LEFT JOIN student_risk_overall r ON r.student_id = st.user_id AND r.week_no = %(w)s AND r.semester_id = %(sem)s
+        LEFT JOIN student_risk_overall pr ON pr.student_id = st.user_id AND pr.week_no = %(w)s - 1 AND pr.semester_id = %(sem)s
         WHERE aa.advisor_id = %(u)s AND aa.starts_on <= CURRENT_DATE AND (aa.ends_on IS NULL OR aa.ends_on >= CURRENT_DATE)
         ORDER BY r.risk_probability DESC NULLS LAST''',
-                                  {'u': u['id'], 'w': week, 'sem': sem['id'], 'v': bundle()['version']}))
+                 {'u': u['id'], 'w': week, 'sem': sem['id'], 'v': bundle()['version']})
+    today = str(one(c, 'SELECT CURRENT_DATE AS d')['d'])[:10]
+    for x in items:
+        days = x['days_since_contact']
+        due = x['recheck_on'] is not None and str(x['recheck_on'])[:10] <= today
+        stale = days is None or int(days) > FOLLOWUP_DAYS
+        x['recheck_due'] = due
+        x['needs_attention'] = bool(due or (x['risk_level'] == 'high' and stale))
+        x['change'] = (round(float(x['risk_probability']) - float(x['prev_risk']), 4)
+                       if x['risk_probability'] is not None and x['prev_risk'] is not None else None)
+    items.sort(key=lambda x: (not x['needs_attention'], -(float(x['risk_probability']) if x['risk_probability'] is not None else -1)))
+    stats = {'total': len(items),
+             'needs_attention': sum(1 for x in items if x['needs_attention']),
+             'high': sum(1 for x in items if x['risk_level'] == 'high'),
+             'medium': sum(1 for x in items if x['risk_level'] == 'medium'),
+             'contacted': sum(1 for x in items if x['last_contact'] is not None)}
+    return jsonify(week=week, followup_days=FOLLOWUP_DAYS, stats=stats, items=items)
 
 
 @bp.post('/interventions')
@@ -360,6 +389,61 @@ def add_intervention():
                'oc': d.get('outcome'), 'rc': d.get('recheck_on'), 'p': pred['id'] if pred else None})
     c.commit()
     return jsonify(id=new[0]['id']), 201
+
+
+@bp.get('/interventions')
+@login_required(*ROLES)
+def list_interventions():
+    '''Журнал вмешательств. ?student_id= — по одному студенту, иначе всё, что доступно пользователю.
+    Преподаватель видит записи по своим курсам и свои собственные, куратор ещё и по подопечным.'''
+    c = conn(); u = me()
+    sid = request.args.get('student_id', type=int)
+    if sid is not None and not can_see_student(c, u['id'], sid, u['role']):
+        return jsonify(error='forbidden'), 403
+    items = rows(c, '''
+        SELECT i.id, i.student_id, st.first_name || ' ' || st.last_name AS student, i.offering_id, co.code AS course_code,
+               i.kind, i.scope, i.summary, i.outcome, i.recheck_on, i.created_at, i.author_id,
+               t.first_name || ' ' || t.last_name AS author
+        FROM interventions i
+        JOIN students st ON st.user_id = i.student_id
+        JOIN teachers t ON t.user_id = i.author_id
+        LEFT JOIN course_offerings o ON o.id = i.offering_id
+        LEFT JOIN courses co ON co.id = o.course_id
+        WHERE (%(s)s::int IS NULL OR i.student_id = %(s)s::int)
+          AND (%(admin)s OR i.author_id = %(u)s
+               OR EXISTS (SELECT 1 FROM advisor_assignments aa WHERE aa.advisor_id = %(u)s AND aa.student_id = i.student_id
+                          AND aa.starts_on <= CURRENT_DATE AND (aa.ends_on IS NULL OR aa.ends_on >= CURRENT_DATE))
+               OR (i.scope = 'course' AND (o.teacher_id = %(u)s OR EXISTS
+                   (SELECT 1 FROM offering_staff f WHERE f.offering_id = o.id AND f.teacher_id = %(u)s))))
+        ORDER BY i.created_at DESC, i.id DESC LIMIT 200''', {'s': sid, 'u': u['id'], 'admin': u['role'] == 'admin'})
+    for x in items:
+        x['mine'] = x['author_id'] == u['id']
+    return jsonify(items=items)
+
+
+@bp.put('/interventions/<int:iid>')
+@login_required(*ROLES)
+def update_intervention(iid):
+    '''Записать результат вмешательства или перенести повторную проверку. Только автор записи (или админ).'''
+    c = conn(); u = me()
+    d = request.get_json(force=True)
+    cur = one(c, 'SELECT id, author_id FROM interventions WHERE id = %(i)s', {'i': iid})
+    if not cur:
+        return jsonify(error='not_found'), 404
+    if u['role'] != 'admin' and cur['author_id'] != u['id']:
+        return jsonify(error='forbidden'), 403
+    if 'outcome' not in d and 'recheck_on' not in d:
+        return jsonify(error='bad_request'), 400
+    outcome = d.get('outcome')
+    if outcome is not None:
+        outcome = str(outcome).strip() or None
+    run(c, '''UPDATE interventions SET
+                outcome    = CASE WHEN %(ho)s THEN %(oc)s ELSE outcome END,
+                recheck_on = CASE WHEN %(hr)s THEN %(rc)s::date ELSE recheck_on END
+              WHERE id = %(i)s''',
+        {'ho': 'outcome' in d, 'oc': outcome, 'hr': 'recheck_on' in d, 'rc': d.get('recheck_on') or None, 'i': iid})
+    c.commit()
+    return jsonify(ok=True)
 
 
 # ------------------------------------------------------------------ отзывы о курсе
